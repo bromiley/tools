@@ -3,6 +3,10 @@
 This is a simple script that can be utilized to parse Windows 10 Prefetch files. Note that it requires 'libscca' to be installed. I tested this on Linux systems, both a custom-build and the SIFT Workstation, release by SANS. Note that this was quickly thrown together; updates and refining to be done.
 
 ### Versioning
+2016-01-18 - v0.2
+
+  * Code optimizations
+
 2016-01-18 - v0.1
   
   * Initial script release

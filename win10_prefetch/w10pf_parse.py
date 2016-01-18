@@ -49,10 +49,15 @@ def parse_dir(dir):
 def outputResults(output):
     if bool(output):
         csv_out = csv.writer(sys.stdout)
-        csv_out.writerow(['Executable Name','Run Count','Last Run Time 1','Last Run Time 2','Last Run Time 3','Last Run Time 4','Last Run Time 5','Last Run Time 6','Last Run Time 7','Last Run Time 8'])
+        headers = ['Executable Name', 'Run Count']
+        for i in range(1,9): # Loop through numbers to create headers
+            headers.append('Last Run Time %s' % i)
+        csv_out.writerow(headers)
         for k, v in output.iteritems():
-            # Need to fix the following loop; automate the boring stuff :)
-            csv_out.writerow([k, v[0], v[1][0], v[1][1], v[1][2], v[1][3], v[1][4], v[1][5], v[1][6], v[1][7]])
+            row = [k, v[0]]
+            for i in range(8): # Loop through range again to get each sub-value for times
+                row.append(v[1][i])
+            csv_out.writerow(row)
     else:
         print "No valid prefetch files were found!"
 
