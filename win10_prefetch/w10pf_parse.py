@@ -37,7 +37,7 @@ def parse_file(pf_file):
     except IOError:
         pass
 
-# Parse an entire directory of Prefetch files. Note that is searches based on .pf extension
+# Parse an entire directory of Prefetch files. Note that it searches based on .pf extension
 def parse_dir(dir):
     for item in os.listdir(dir):
         if item.endswith(".pf"): #Only focus on .pf files
