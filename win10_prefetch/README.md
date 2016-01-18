@@ -13,6 +13,6 @@ This is a simple script that can be utilized to parse Windows 10 Prefetch files.
   * libscca, which can be downloaded [here](https://github.com/libyal/libscca). Thanks to Joachim Metz for the helpful library.
 
 ### Future Plans
-  [ ] Expanded output options
-  [ ] Output volume information if user wants it
-  [ ] Parsing of ZIP files for compressed PF files
+  - [ ] Expanded output options
+  - [ ] Output volume information if user wants it
+  - [ ] Parsing of ZIP files for compressed PF files
