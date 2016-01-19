@@ -19,4 +19,4 @@ This is a simple script that can be utilized to parse Windows 10 Prefetch files.
 ### Future Plans
   - [ ] Expanded output options
   - [ ] Output volume information if user wants it
-  - [ ] Parsing of ZIP files for compressed PF files
+  - [ ] Parsing of ZIP files
