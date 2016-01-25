@@ -1,2 +1,3 @@
 *.pf
 .idea
+*prefetch_test*
