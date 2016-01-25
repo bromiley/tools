@@ -1,0 +1,10 @@
+#### Transpose a column to rows
+awk 'BEGIN{ORS=","}1' <input_file>
+
+#### Print a certain column, with delimiter
+awk -F<delimiter> '{ print $<column_num> }'
+	-F can also be encapsulated in quotes, with a space between flag and string
+	
+#### Print the number of fields within a rows
+awk -F<delimiter> '{ print NF; }'
+

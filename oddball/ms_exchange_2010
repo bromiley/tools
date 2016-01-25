@@ -1,0 +1,42 @@
+##Note: All commands must be performed using Exchange Management Shell
+
+#### Export a Mail File to Pst
+New-MailboxExportRequest -Mailbox <user.name> -FilePath \\must\be\unc\path\filename.pst
+
+#### Get status of a Mail File Export
+Get-MailboxExportRequest | Get-MailboxExportRequestStatistics
+
+#### Export Specific Data from a User's Mailbox
+New-MailboxExportRequest -Mailbox <user.name> -ContentFilter <options galore> -FilePath \\must\be\unc\path\filename.pst
+
+  * ContentFilter syntax:
+    * Strings: {Option -like "string"} [wildcards OK] OR {Option -eq 'string'}
+    * Date: {Option -lt '01/01/1900'} OR {Option -gt '01/01/1900'}
+    * True/False: {Option -eq $true}
+    
+  * ContentFilter Options Include:
+    * All (all messages that have a particular string of any kind within indexes properties/fields)
+    * Attachment (Messages that have an attachment matching the string)
+    * BCC (Matches string in BCC field)
+    * Body (Matches string in message body)
+    * Category (Matches string in Categoy field, if used. This rule is set by the mailbox user)
+    * CC (Matches string in the CC field)
+    * Expires (Matches date in the expiration timestamp)
+    * HasAttachment (Matches whether has attachment or not)
+    * Importance (Matches importance; 0 or Low, 1 or Normal, 2 or High)
+    * IsFlagged (Matches if flagged)
+    * IsRead (Matches if read)
+    * MessageKind (Message kind [ email, meetings, tasks, notes, docs, journal, contacts, im, voicemail, fax, posts, rssfeeds] )
+    * MessageLocale (Specific locale)
+    * Participants (Returns messages that are in To, BCC, or CC fields)
+    * PolicyTag (Policy tags)
+    * Received (Returns messages received within a certain timeframe)
+    * Sender (Returns messages where the sender property matches a string)
+    * Sent (Returns messages sent within a certain timeframe)
+    * Size (Returns messages that are of a specific size)
+    * Subject (Returns messages that meet a string within the subject)
+    * To (Returns messages that meet a string in the To field)
+	
+#### Clear out Completed Items from the Status Window
+Get-MailboxExportRequest -Status Completed | Remove-MailboxExportRequest
+    

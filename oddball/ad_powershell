@@ -1,0 +1,13 @@
+##Note: All commands must be performed using Active Directory Powershell Module
+
+#### Display Properties for an Account
+Get-ADUser -Identity <user_identity> -Properties *
+
+#### Display $Properties for All Users; Display in a Tabular Table
+Get-ADUser -Filter * -Properties passwordlastset, passwordneverexpires | ft Name, passwordlastset, passwordneverexpires
+
+##### The above command can also include a sort to sort by name
+Get-ADUser -Filter * -Properties passwordlastset, passwordneverexpires | sort Name | ft Name, passwordlastset, passwordneverexpires
+
+##### Export above command to CSV
+Get-ADUser -Filter * -Properties passwordlastset, passwordneverexpires | sort object-name | select-object Name, passwordlastset, passwordneverexpires | Export-csv -path C:\Users\user\desktop\file.csv

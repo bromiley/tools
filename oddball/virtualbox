@@ -1,0 +1,14 @@
+#### List Hard Drives
+VBoxManage list hdds
+
+#### Start a VM Headless/In the background
+VBoxHeadless -s <name> -v off &
+
+#### Purge a registered hard disk
+VBoxManage closemedium disk <uuid> --delete
+
+#### Find information from a running VM
+VBoxManage guestproperty enumerate <VM name>
+
+#### Poweroff
+VBoxManage controlvm <VM name> poweroff

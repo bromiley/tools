@@ -1,0 +1,33 @@
+_1_Microsoft Excel__
+100078, Circular reference
+100113, File already open
+100144, File is ready only, cannot be saved
+100175, No items found in search
+100182, Couldn't free up Clipboard
+100216, Save changes
+100219, Only convert one column at a time
+100273, Deleting sheets
+100433, Merged cells will be unmerged
+100834, No data selected to parse
+101013, Formula error and correction
+101127, Find/replace complete
+101608, Delete name
+
+_2_Microsoft Word__
+200054, Save changes
+200133, Keep last item copied?
+200529, File not found
+
+_3_Microsoft Outlook__
+300083, File already open or no permissions
+300191, Save changes
+300984, Permanently delete items in "Deleted Items" folder
+302174, The selected conversation and all future messages will be deleted
+
+_4_Microsoft PowerPoint__
+400031, No items found in search
+400056, File is read only, cannot be saved
+400072, Save changes
+
+_5_Microsoft Access__
+508050, Save changes
