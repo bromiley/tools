@@ -51,7 +51,7 @@ def main():
     group = parser.add_argument_group()
     group.add_argument('-o','--out',metavar='FILE',help='File to output to [default is <log_name>_timeframes.csv]')
     group = parser.add_mutually_exclusive_group()
-    group.add_argument('-l','--log',metavar='LOG',help="log to parse")
+    group.add_argument('-l','--log',metavar='LOG',help="Log to parse")
 
     args = parser.parse_args()
 
