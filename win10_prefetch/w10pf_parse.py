@@ -32,13 +32,13 @@ def parse_file(pf_file,volume_information):
                 last_run_times.append(scca.get_last_run_time(x).strftime("%Y-%m-%d %H:%M:%S")) #str conversion utilized to change from datetime into human-readable
             else:
                 last_run_times.append('N/A')
-        output[str(scca.executable_filename)] = [str(scca.run_count), hex(scca.prefetch_hash), last_run_times]
+        output[str(scca.executable_filename)] = [str(scca.run_count), format(scca.prefetch_hash, 'x').upper(), last_run_times]
 
         if volume_information:
             output[str(scca.executable_filename)].append(scca.number_of_volumes)
             volumes = []
             for i in range(scca.number_of_volumes):
-                volume = [str(scca.get_volume_information(i).device_path), scca.get_volume_information(i).creation_time.strftime("%Y-%m-%d %H:%M:%S"), hex(scca.get_volume_information(i).serial_number)]
+                volume = [str(scca.get_volume_information(i).device_path), scca.get_volume_information(i).creation_time.strftime("%Y-%m-%d %H:%M:%S"), format(scca.get_volume_information(i).serial_number,'x').upper()]
                 volumes.append(volume)
 
             output[str(scca.executable_filename)].append(volumes)
@@ -61,7 +61,7 @@ def outputResults(output,output_file=None,output_type=None,volume_information=No
             json_output = {
                 'Executable Name' : k,
                 'Run Count' : v[0],
-                'Prefetch Hash' : v[1],
+                'Prefetch Hash' :  v[1],
             }
             #Let the script iterate through run times for us, instead of just dumping a list
             run_list = {}
