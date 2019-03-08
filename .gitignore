@@ -2,3 +2,4 @@
 .idea
 *prefetch_test*
 prefetch.zip
+*.tfvars
