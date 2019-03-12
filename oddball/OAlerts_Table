@@ -4,12 +4,16 @@ _1_Microsoft Excel__
 100144, File is ready only, cannot be saved
 100175, No items found in search
 100182, Couldn't free up Clipboard
-100216, Save changes
+100198, This workbook contains links to one or more external sources that could be unsafe. If you trust the links, update them to get the latest data. Otherwise, you can keep working with the data you have
+100202, Sorry, we couldn't find [File Path\File Name]. Is it possible it was moved, renamed or deleted
+100207, The name '[Name]' already exists. Click Yes to use that version of the name, or click No to rename the version of '[Name]' you're moving or copying
+100216, Want to save your changes to [File Name]
 100219, Only convert one column at a time
 100273, Deleting sheets
 100433, Merged cells will be unmerged
 100834, No data selected to parse
 101013, Formula error and correction
+101120, We can't update some of the links in your workbook right now. You can continue without updating their values, or edit the links you think are wrong
 101127, Find/replace complete
 101608, Delete name
 
@@ -19,10 +23,18 @@ _2_Microsoft Word__
 200529, File not found
 
 _3_Microsoft Outlook__
+300046, Some of the settings you changed may not work in Outlook. To control print settings in Outlook, use the Page Setup dialog box
 300083, File already open or no permissions
 300191, Save changes
+300894, Everything in the "Deleted Items" folder will be permanently deleted
 300984, Permanently delete items in "Deleted Items" folder
+301089, Move "[Folder Name]" to your Deleted Items folder
+301489, This will be permanently deleted
+301808, If you continue, you'll lose your changes to the attachment "[File Name]" opened from the message "[Email Subject]"
+302076, Move everything in this folder to your Deleted Items folder
+302097, Delete this folder and everything in it
 302174, The selected conversation and all future messages will be deleted
+399999, Are you sure you want to move the folder [Folder 1] inside the folder [Folder 2]?
 
 _4_Microsoft PowerPoint__
 400031, No items found in search
@@ -31,3 +43,12 @@ _4_Microsoft PowerPoint__
 
 _5_Microsoft Access__
 508050, Save changes
+
+_7_Microsoft Excel__
+700468, Sorry, we couldn't open '[File Path]'
+
+_7_Microsoft Word__
+701821, Are you sure you want to remove all unpinned items from the list
+
+_7_Microsoft Outlook__
+700159, Outlook couldn't start last time. Safe mode could help you troubleshoot the problem, but some features might not be available in this mode
