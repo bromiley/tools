@@ -18,7 +18,7 @@ import json
 try:
     import pyscca #Import pyscca, necessary from libscca
 except ImportError:
-    print "Please install libscca with Python bindings"
+    print("Please install libscca with Python bindings")
 
 output = {}
 
@@ -57,7 +57,7 @@ def parse_dir(dir,volume_information):
 
 def outputResults(output,output_file=None,output_type=None,volume_information=None):
     if output_type:
-        for k, v in output.iteritems():
+        for k, v in output.items():
             json_output = {
                 'Executable Name' : k,
                 'Run Count' : v[0],
@@ -90,7 +90,7 @@ def outputResults(output,output_file=None,output_type=None,volume_information=No
                 with open(output_file,'w') as file:
                     json.dump(json_output,file)
             else:
-                print json.dumps(json_output,indent=4,sort_keys=True)
+                print(json.dumps(json_output,indent=4,sort_keys=True))
 
     else:
         if output_file:
@@ -109,7 +109,7 @@ def outputResults(output,output_file=None,output_type=None,volume_information=No
 
             # Need to get the max value of the number of volumes, and create our headers accordingly. Note that some files will have less volumes than others, and will have blank cells where appropriate
             volume_count = []
-            for k, v in output.iteritems():
+            for k, v in output.items():
                 volume_count.append(v[3])
             for i in range(max(volume_count)):
                 # Adding in volume-specific headers one-by-one, simply to avoid list formatting in the CSV output
@@ -118,7 +118,7 @@ def outputResults(output,output_file=None,output_type=None,volume_information=No
                 headers.append(str('Volume {} Serial Number').format(i))
 
         csv_out.writerow(headers)
-        for k, v in output.iteritems():
+        for k, v in output.items():
             row = [k, v[0], v[1]]
             for i in range(8): # Loop through range again to get each sub-value for times
                 row.append(v[2][i])
@@ -155,7 +155,7 @@ def main():
         output = parse_dir(args.directory,args.volumes)
 
     if not output:
-        print "No valid prefetch files were found!"
+        print("No valid prefetch files were found!")
     else:
         outputResults(output,args.output,args.json,args.volumes)
 if __name__ == "__main__":
